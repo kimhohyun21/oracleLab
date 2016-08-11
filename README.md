@@ -1,2 +1,2 @@
 # oracleLab
-Upload oracleLab study file
+Upload oracle and SQL study file
