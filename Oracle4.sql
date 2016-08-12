@@ -60,3 +60,7 @@
 
 -- <19> 이름이 S로 시작하는 사원의 사원 번호, 이름, 입사일자, 부서번호를 출력하라
    SELECT empno, ename, hiredate, deptno FROM emp WHERE ename LIKE 'S%';
+
+-- <20> 입사일자가 81년도인 사람의 모든 정보를 출력하라
+   SELECT * FROM emp WHERE hiredate LIKE '81%';
+   SELECT * FROM emp WHERE TO_CHAR(hiredate, 'yy/mm/dd') LIKE '81%';
