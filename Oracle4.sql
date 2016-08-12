@@ -42,3 +42,9 @@
 
 -- <14> 사원번호가 7654와 7782 사이 이외의 사원의 모든 정보를 출력하라
    SELECT * FROM emp WHERE empno<7654 OR empno>7782;
+   SELECT * FROM emp WHERE NOT empno BETWEEN 7654 AND 7782;
+
+-- <15> 이름이 B와 J사이의 모든 사원의 정보를 출력하라
+   SELECT * FROM emp WHERE SUBSTR(ename, 1, 1) BETWEEN 'B' AND 'J';
+   SELECT * FROM emp WHERE ename BETWEEN 'B' AND 'K';
+

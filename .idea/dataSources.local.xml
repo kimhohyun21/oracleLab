@@ -4,8 +4,8 @@
     <data-source name="Oracle - @211.238.142.88" uuid="4cb687f7-a87d-4aae-a3f7-a911e0f8370a">
       <secret-storage>master_key</secret-storage>
       <user-name>scott</user-name>
-      <introspection-scope>*:SCOTT,PUBLIC,SYS,SYSTEM</introspection-scope>
-      <resolve-scope>*:SCOTT,PUBLIC</resolve-scope>
+      <introspection-scope>*:PUBLIC,SCOTT,SYS,SYSTEM</introspection-scope>
+      <resolve-scope>*:PUBLIC,SCOTT</resolve-scope>
     </data-source>
   </component>
 </project>
