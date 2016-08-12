@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Oracle - @211.238.142.88" uuid="4cb687f7-a87d-4aae-a3f7-a911e0f8370a">
+    <database-info product="Oracle" version="Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production&#xa;With the Partitioning, OLAP, Data Mining and Real Application Testing options" jdbc-version="4.0" driver-name="Oracle JDBC driver" driver-version="12.1.0.2.0">
+      <extra-name-characters>$#</extra-name-characters>
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="ORACLE" format-version="2.6">
+      <schema id="1" name="SCOTT">
+        <object-id>84</object-id>
+        <created-timestamp>2010-03-30.11:06:23</created-timestamp>
+        <modified-timestamp>2016-08-11.12:38:54</modified-timestamp>
+        <visible>1</visible>
+        <introspection-timestamp>2016-08-11.16:59:28</introspection-timestamp>
+      </schema>
+      <schema id="2" name="PUBLIC">
+        <object-id>1</object-id>
+      </schema>
+      <schema id="3" name="SYS"/>
+      <schema id="4" name="SYSTEM">
+        <object-id>5</object-id>
+      </schema>
+      <schema id="5" name="OUTLN">
+        <object-id>9</object-id>
+      </schema>
+      <schema id="6" name="DIP">
+        <object-id>14</object-id>
+      </schema>
+      <schema id="7" name="ORACLE_OCM">
+        <object-id>21</object-id>
+      </schema>
+      <schema id="8" name="DBSNMP">
+        <object-id>30</object-id>
+      </schema>
+      <schema id="9" name="APPQOSSYS">
+        <object-id>31</object-id>
+      </schema>
+      <schema id="10" name="WMSYS">
+        <object-id>32</object-id>
+      </schema>
+      <schema id="11" name="EXFSYS">
+        <object-id>42</object-id>
+      </schema>
+      <schema id="12" name="CTXSYS">
+        <object-id>43</object-id>
+      </schema>
+      <schema id="13" name="XDB">
+        <object-id>45</object-id>
+      </schema>
+      <schema id="14" name="ANONYMOUS">
+        <object-id>46</object-id>
+      </schema>
+      <schema id="15" name="ORDSYS">
+        <object-id>53</object-id>
+      </schema>
+      <schema id="16" name="ORDDATA">
+        <object-id>54</object-id>
+      </schema>
+      <schema id="17" name="ORDPLUGINS">
+        <object-id>55</object-id>
+      </schema>
+      <schema id="18" name="SI_INFORMTN_SCHEMA">
+        <object-id>56</object-id>
+      </schema>
+      <schema id="19" name="MDSYS">
+        <object-id>57</object-id>
+      </schema>
+      <schema id="20" name="OLAPSYS">
+        <object-id>61</object-id>
+      </schema>
+      <schema id="21" name="MDDATA">
+        <object-id>65</object-id>
+      </schema>
+      <schema id="22" name="SPATIAL_WFS_ADMIN_USR">
+        <object-id>67</object-id>
+      </schema>
+      <schema id="23" name="SPATIAL_CSW_ADMIN_USR">
+        <object-id>70</object-id>
+      </schema>
+      <schema id="24" name="SYSMAN">
+        <object-id>72</object-id>
+      </schema>
+      <schema id="25" name="MGMT_VIEW">
+        <object-id>74</object-id>
+      </schema>
+      <schema id="26" name="FLOWS_FILES">
+        <object-id>75</object-id>
+      </schema>
+      <schema id="27" name="APEX_PUBLIC_USER">
+        <object-id>76</object-id>
+      </schema>
+      <schema id="28" name="APEX_030200">
+        <object-id>78</object-id>
+      </schema>
+      <schema id="29" name="OWBSYS">
+        <object-id>79</object-id>
+      </schema>
+      <schema id="30" name="OWBSYS_AUDIT">
+        <object-id>83</object-id>
+      </schema>
+      <schema id="31" name="HR">
+        <object-id>85</object-id>
+      </schema>
+      <schema id="32" name="OE">
+        <object-id>86</object-id>
+      </schema>
+      <schema id="33" name="IX">
+        <object-id>87</object-id>
+      </schema>
+      <schema id="34" name="SH">
+        <object-id>88</object-id>
+      </schema>
+      <schema id="35" name="PM">
+        <object-id>89</object-id>
+      </schema>
+      <schema id="36" name="BI">
+        <object-id>90</object-id>
+      </schema>
+      <schema id="37" name="XS$NULL">
+        <object-id>2147483638</object-id>
+      </schema>
+      <sequence id="38" parent="1" name="AUTONUM">
+        <object-id>74582</object-id>
+        <created-timestamp>2016-07-29.16:47:07</created-timestamp>
+        <modified-timestamp>2016-07-29.16:47:07</modified-timestamp>
+        <min-value>1</min-value>
+        <max-value>100</max-value>
+        <increment-by>1</increment-by>
+        <next-value>3</next-value>
+        <cache-size>-2147483648</cache-size>
+      </sequence>
+      <table id="39" parent="1" name="BONUS">
+        <object-id>73198</object-id>
+        <created-timestamp>2010-03-30.11:06:23</created-timestamp>
+        <modified-timestamp>2010-03-30.11:06:23</modified-timestamp>
+        <organization>HEAP</organization>
+      </table>
+      <table id="40" parent="1" name="BOOK">
+        <object-id>74746</object-id>
+        <created-timestamp>2016-08-11.12:18:04</created-timestamp>
+        <modified-timestamp>2016-08-11.12:18:04</modified-timestamp>
+        <organization>HEAP</organization>
+      </table>
+      <table id="41" parent="1" name="CUSTOMER">
+        <object-id>74744</object-id>
+        <created-timestamp>2016-08-11.10:14:30</created-timestamp>
+        <modified-timestamp>2016-08-11.10:14:30</modified-timestamp>
+        <organization>HEAP</organization>
+      </table>
+      <table id="42" parent="1" name="DEPT">
+        <object-id>73194</object-id>
+        <created-timestamp>2010-03-30.11:06:23</created-timestamp>
+        <modified-timestamp>2010-03-30.11:06:23</modified-timestamp>
+        <organization>HEAP</organization>
+      </table>
+      <table id="43" parent="1" name="EMP">
+        <object-id>73196</object-id>
+        <created-timestamp>2010-03-30.11:06:23</created-timestamp>
+        <modified-timestamp>2010-03-30.11:06:23</modified-timestamp>
+        <organization>HEAP</organization>
+      </table>
+      <table id="44" parent="1" name="ORDERS">
+        <object-id>74748</object-id>
+        <created-timestamp>2016-08-11.12:38:54</created-timestamp>
+        <modified-timestamp>2016-08-11.12:38:54</modified-timestamp>
+        <organization>HEAP</organization>
+      </table>
+      <table id="45" parent="1" name="PKDB">
+        <object-id>74580</object-id>
+        <created-timestamp>2016-07-29.16:46:57</created-timestamp>
+        <modified-timestamp>2016-07-29.16:46:57</modified-timestamp>
+        <organization>HEAP</organization>
+      </table>
+      <table id="46" parent="1" name="SALGRADE">
+        <object-id>73199</object-id>
+        <created-timestamp>2010-03-30.11:06:23</created-timestamp>
+        <modified-timestamp>2010-03-30.11:06:23</modified-timestamp>
+        <organization>HEAP</organization>
+      </table>
+      <table id="47" parent="1" name="ZIPCODE">
+        <object-id>74742</object-id>
+        <created-timestamp>2016-08-08.16:21:14</created-timestamp>
+        <modified-timestamp>2016-08-08.16:21:14</modified-timestamp>
+        <organization>HEAP</organization>
+      </table>
+      <column id="48" parent="39" name="ENAME">
+        <data-type>VARCHAR2(10)|0</data-type>
+      </column>
+      <column id="49" parent="39" name="JOB">
+        <data-type>VARCHAR2(9)|0</data-type>
+      </column>
+      <column id="50" parent="39" name="SAL">
+        <data-type>NUMBER(*)|0</data-type>
+      </column>
+      <column id="51" parent="39" name="COMM">
+        <data-type>NUMBER(*)|0</data-type>
+      </column>
+      <column id="52" parent="40" name="BOOKID">
+        <mandatory>1</mandatory>
+        <data-type>NUMBER(2)|0</data-type>
+      </column>
+      <column id="53" parent="40" name="BOOKNAME">
+        <data-type>VARCHAR2(40)|0</data-type>
+      </column>
+      <column id="54" parent="40" name="PUBLISHER">
+        <data-type>VARCHAR2(40)|0</data-type>
+      </column>
+      <column id="55" parent="40" name="PRICE">
+        <data-type>NUMBER(8)|0</data-type>
+      </column>
+      <index id="56" parent="40" name="SYS_C0011062">
+        <name-surrogate>1</name-surrogate>
+        <object-id>74747</object-id>
+        <created-timestamp>2016-08-11.12:18:04</created-timestamp>
+        <modified-timestamp>2016-08-11.12:18:04</modified-timestamp>
+        <columns>BOOKID</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+        <tablespace-name>USERS</tablespace-name>
+      </index>
+      <key id="57" parent="40" name="SYS_C0011062">
+        <name-surrogate>1</name-surrogate>
+        <modified-timestamp>2016-08-11.12:18:04</modified-timestamp>
+        <columns>BOOKID</columns>
+        <initially-deferred>1</initially-deferred>
+        <underlying-index>SYS_C0011062</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="58" parent="41" name="CUSTID">
+        <mandatory>1</mandatory>
+        <data-type>NUMBER(2)|0</data-type>
+      </column>
+      <column id="59" parent="41" name="NAME">
+        <data-type>VARCHAR2(40)|0</data-type>
+      </column>
+      <column id="60" parent="41" name="ADRESS">
+        <data-type>VARCHAR2(50)|0</data-type>
+      </column>
+      <column id="61" parent="41" name="PHONE">
+        <data-type>VARCHAR2(20)|0</data-type>
+      </column>
+      <index id="62" parent="41" name="SYS_C0011061">
+        <name-surrogate>1</name-surrogate>
+        <object-id>74745</object-id>
+        <created-timestamp>2016-08-11.10:14:30</created-timestamp>
+        <modified-timestamp>2016-08-11.10:14:30</modified-timestamp>
+        <columns>CUSTID</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+        <tablespace-name>USERS</tablespace-name>
+      </index>
+      <key id="63" parent="41" name="SYS_C0011061">
+        <name-surrogate>1</name-surrogate>
+        <modified-timestamp>2016-08-11.10:14:30</modified-timestamp>
+        <columns>CUSTID</columns>
+        <initially-deferred>1</initially-deferred>
+        <underlying-index>SYS_C0011061</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="64" parent="42" name="DEPTNO">
+        <mandatory>1</mandatory>
+        <data-type>NUMBER(2)|0</data-type>
+      </column>
+      <column id="65" parent="42" name="DNAME">
+        <data-type>VARCHAR2(14)|0</data-type>
+      </column>
+      <column id="66" parent="42" name="LOC">
+        <data-type>VARCHAR2(13)|0</data-type>
+      </column>
+      <index id="67" parent="42" name="PK_DEPT">
+        <object-id>73195</object-id>
+        <created-timestamp>2010-03-30.11:06:23</created-timestamp>
+        <modified-timestamp>2010-03-30.11:06:23</modified-timestamp>
+        <columns>DEPTNO</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+        <tablespace-name>USERS</tablespace-name>
+      </index>
+      <key id="68" parent="42" name="PK_DEPT">
+        <modified-timestamp>2010-03-30.11:06:23</modified-timestamp>
+        <columns>DEPTNO</columns>
+        <initially-deferred>1</initially-deferred>
+        <underlying-index>PK_DEPT</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="69" parent="43" name="EMPNO">
+        <mandatory>1</mandatory>
+        <data-type>NUMBER(4)|0</data-type>
+      </column>
+      <column id="70" parent="43" name="ENAME">
+        <data-type>VARCHAR2(10)|0</data-type>
+      </column>
+      <column id="71" parent="43" name="JOB">
+        <data-type>VARCHAR2(9)|0</data-type>
+      </column>
+      <column id="72" parent="43" name="MGR">
+        <data-type>NUMBER(4)|0</data-type>
+      </column>
+      <column id="73" parent="43" name="HIREDATE">
+        <data-type>DATE|0</data-type>
+      </column>
+      <column id="74" parent="43" name="SAL">
+        <data-type>NUMBER(7,2)|0</data-type>
+      </column>
+      <column id="75" parent="43" name="COMM">
+        <data-type>NUMBER(7,2)|0</data-type>
+      </column>
+      <column id="76" parent="43" name="DEPTNO">
+        <data-type>NUMBER(2)|0</data-type>
+      </column>
+      <index id="77" parent="43" name="PK_EMP">
+        <object-id>73197</object-id>
+        <created-timestamp>2010-03-30.11:06:23</created-timestamp>
+        <modified-timestamp>2010-03-30.11:06:23</modified-timestamp>
+        <columns>EMPNO</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+        <tablespace-name>USERS</tablespace-name>
+      </index>
+      <key id="78" parent="43" name="PK_EMP">
+        <modified-timestamp>2010-03-30.11:06:23</modified-timestamp>
+        <columns>EMPNO</columns>
+        <initially-deferred>1</initially-deferred>
+        <underlying-index>PK_EMP</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="79" parent="43" name="FK_DEPTNO">
+        <modified-timestamp>2010-03-30.11:06:23</modified-timestamp>
+        <columns>DEPTNO</columns>
+        <initially-deferred>1</initially-deferred>
+        <ref-key>~.DEPT.PK_DEPT</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="80" parent="44" name="ORDERID">
+        <mandatory>1</mandatory>
+        <data-type>NUMBER(2)|0</data-type>
+      </column>
+      <column id="81" parent="44" name="CUSTID">
+        <data-type>NUMBER(2)|0</data-type>
+      </column>
+      <column id="82" parent="44" name="BOOKID">
+        <data-type>NUMBER(2)|0</data-type>
+      </column>
+      <column id="83" parent="44" name="SALPRICE">
+        <data-type>NUMBER(8)|0</data-type>
+      </column>
+      <column id="84" parent="44" name="ORDERDATE">
+        <data-type>DATE|0</data-type>
+      </column>
+      <index id="85" parent="44" name="SYS_C0011063">
+        <name-surrogate>1</name-surrogate>
+        <object-id>74749</object-id>
+        <created-timestamp>2016-08-11.12:38:54</created-timestamp>
+        <modified-timestamp>2016-08-11.12:38:54</modified-timestamp>
+        <columns>ORDERID</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+        <tablespace-name>USERS</tablespace-name>
+      </index>
+      <key id="86" parent="44" name="SYS_C0011063">
+        <name-surrogate>1</name-surrogate>
+        <modified-timestamp>2016-08-11.12:38:54</modified-timestamp>
+        <columns>ORDERID</columns>
+        <initially-deferred>1</initially-deferred>
+        <underlying-index>SYS_C0011063</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="87" parent="44" name="SYS_C0011064">
+        <name-surrogate>1</name-surrogate>
+        <modified-timestamp>2016-08-11.12:38:54</modified-timestamp>
+        <columns>CUSTID</columns>
+        <initially-deferred>1</initially-deferred>
+        <ref-key>~.CUSTOMER.SYS_C0011061</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="88" parent="44" name="SYS_C0011065">
+        <name-surrogate>1</name-surrogate>
+        <modified-timestamp>2016-08-11.12:38:54</modified-timestamp>
+        <columns>BOOKID</columns>
+        <initially-deferred>1</initially-deferred>
+        <ref-key>~.BOOK.SYS_C0011062</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="89" parent="45" name="NO">
+        <mandatory>1</mandatory>
+        <data-type>NUMBER(*)|0</data-type>
+      </column>
+      <column id="90" parent="45" name="USERID">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR2(20)|0</data-type>
+      </column>
+      <column id="91" parent="45" name="USERPWD">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR2(20)|0</data-type>
+      </column>
+      <column id="92" parent="45" name="USERSCORE">
+        <data-type>NUMBER(*)|0</data-type>
+      </column>
+      <index id="93" parent="45" name="SYS_C0011060">
+        <name-surrogate>1</name-surrogate>
+        <object-id>74581</object-id>
+        <created-timestamp>2016-07-29.16:46:57</created-timestamp>
+        <modified-timestamp>2016-07-29.16:46:57</modified-timestamp>
+        <columns>NO</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+        <tablespace-name>USERS</tablespace-name>
+      </index>
+      <key id="94" parent="45" name="SYS_C0011060">
+        <name-surrogate>1</name-surrogate>
+        <modified-timestamp>2016-07-29.16:46:57</modified-timestamp>
+        <columns>NO</columns>
+        <initially-deferred>1</initially-deferred>
+        <underlying-index>SYS_C0011060</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="95" parent="46" name="GRADE">
+        <data-type>NUMBER(*)|0</data-type>
+      </column>
+      <column id="96" parent="46" name="LOSAL">
+        <data-type>NUMBER(*)|0</data-type>
+      </column>
+      <column id="97" parent="46" name="HISAL">
+        <data-type>NUMBER(*)|0</data-type>
+      </column>
+      <column id="98" parent="47" name="ZIPCODE">
+        <data-type>VARCHAR2(7)|0</data-type>
+      </column>
+      <column id="99" parent="47" name="SIDO">
+        <data-type>VARCHAR2(50)|0</data-type>
+      </column>
+      <column id="100" parent="47" name="GUGUN">
+        <data-type>VARCHAR2(50)|0</data-type>
+      </column>
+      <column id="101" parent="47" name="DONG">
+        <data-type>VARCHAR2(100)|0</data-type>
+      </column>
+      <column id="102" parent="47" name="BUNGI">
+        <data-type>VARCHAR2(50)|0</data-type>
+      </column>
+    </database-model>
+  </data-source>
+</component>
