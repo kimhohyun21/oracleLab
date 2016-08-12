@@ -57,3 +57,6 @@
 
 -- <18> 부서번호 20, 30번을 제외한 모든 사람의 이름 사원번호, 부서번호를 출력하라
    SELECT ename, empno, deptno FROM emp WHERE deptno NOT IN(20, 30);
+
+-- <19> 이름이 S로 시작하는 사원의 사원 번호, 이름, 입사일자, 부서번호를 출력하라
+   SELECT empno, ename, hiredate, deptno FROM emp WHERE ename LIKE 'S%';
