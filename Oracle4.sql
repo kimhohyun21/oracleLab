@@ -48,3 +48,12 @@
    SELECT * FROM emp WHERE SUBSTR(ename, 1, 1) BETWEEN 'B' AND 'J';
    SELECT * FROM emp WHERE ename BETWEEN 'B' AND 'K';
 
+-- <16> 입사일자가 81년 이외에 입사한 사람의 모든 정보를 출력하라
+   SELECT * FROM emp WHERE hiredate NOT LIKE '81%';
+   SELECT * FROM emp WHERE TO_CHAR(hiredate, 'yy/mm/dd') NOT LIKE '81%';
+
+-- <17> 직무가 MANAGER와 SALESMAN인 사람의 모든 정보를 출력하라
+   SELECT * FROM emp WHERE job IN('MANAGER', 'SALESMAN');
+
+-- <18> 부서번호 20, 30번을 제외한 모든 사람의 이름 사원번호, 부서번호를 출력하라
+   SELECT ename, empno, deptno FROM emp WHERE deptno NOT IN(20, 30);
