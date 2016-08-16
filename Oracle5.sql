@@ -121,7 +121,12 @@
 -- 각 부서 중에 급여의 평균보다 많은 급여를 받는 사원의 수를 출력하라
    SELECT * FROM emp;
    SELECT AVG(sal) FROM emp;
-   SELECT deptno, COUNT(*) FROM emp WHERE sal>(select AVG(sal) from emp) GROUP BY deptno;
+
+   SELECT deptno, COUNT(*), SUM(SAL),AVG(SAL)
+   FROM emp WHERE sal>(select AVG(sal) from emp) GROUP BY deptno;
+
+   SELECT DEPTNO,COUNT(*),SUM(SAL),AVG(SAL)
+   FROM ( SELECT * FROM EMP WHERE SAL>(SELECT AVG(SAL) FROM EMP)) GROUP BY DEPTNO;
 
 -- 각 부서 중에 급여의 평균보다 많은 급여를 받는 부서의 사원의 수를 출력하라
    SELECT deptno, COUNT(*), SUM(sal), AVG(sal)
