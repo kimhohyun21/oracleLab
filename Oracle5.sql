@@ -79,3 +79,50 @@
    SELECT COUNT(*), AVG(sal), SUM(sal) FROM emp WHERE deptno=30;
 
    SELECT deptno, COUNT(*), AVG(sal), SUM(sal) FROM emp GROUP BY deptno;
+
+-- <정리>
+/*
+1. SELECT 문의 기본 문법
+   SELECT [ALL | DISTINCT] 속성 이름(들)
+   FROM   테이블 이름(들)
+   [WHERE 검색조건(들)]
+   [ORDER BY 속성이름 (ASC | DESC)]
+   [GROUP BY 속성이름]
+   [HAVING  검색조건(들)]
+   ------------------------------------
+   [] : 대괄호 안의 SQL 예약어들은 선택적으로 사용
+   | :  선택가능한 문법들 중 한개를 사용
+
+2. WHERE 절에 조건으로 사용할 수 있는 술어
+   술어           연산자
+   비교       =, <>, <, <=, >, >=
+   범위       BETWEEN
+   집합       IN, NOT IN
+   패턵       LIKE
+   NULL      IS NULL, IS NOT NULL
+   복합조건    AND, OR, NOT
+
+3. GROUP BY <속성>
+   GROUP BY로 행을 그룹으로 묶은 후에는
+   SELECT절에는 GROUP BY에서 사용한 <속성>과 집계함수만 나올 수 있음.
+
+4. HAVING <검색조건>
+   GROUP BY절에 의해 구성된 그룹들에 대해 적용할 조건을 기술함
+   HAVING절은  1) 반드시 GROUP BY절과 같이 작성
+              2) WHERE절보다 뒤에 나와야 함
+              3) <검색조건> 에는 집계함수가 와야 함.
+                 SUM, AVG, MAX, MIN, COUNT
+ */
+
+-- 같은 연도에 입사한 사원들의 인원수, 급여평균, 총급여를 출력하라
+   SELECT SUBSTR(hiredate, 1,2), COUNT(*), AVG(sal), SUM(sal)
+   FROM emp GROUP BY SUBSTR(hiredate, 1, 2);
+
+-- 각 부서 중에 급여의 평균보다 많은 급여를 받는 사원의 수를 출력하라
+   SELECT * FROM emp;
+   SELECT AVG(sal) FROM emp;
+   SELECT deptno, COUNT(*) FROM emp WHERE sal>(select AVG(sal) from emp) GROUP BY deptno;
+
+-- 각 부서 중에 급여의 평균보다 많은 급여를 받는 부서의 사원의 수를 출력하라
+   SELECT deptno, COUNT(*), SUM(sal), AVG(sal)
+   FROM emp GROUP BY deptno HAVING AVG(sal)>(SELECT AVG(sal) FROM emp);
