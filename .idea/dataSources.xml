@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="4040553806">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
     <data-source source="LOCAL" name="Oracle - @211.238.142.88" uuid="4cb687f7-a87d-4aae-a3f7-a911e0f8370a">
       <driver-ref>oracle</driver-ref>
       <synchronize>true</synchronize>
