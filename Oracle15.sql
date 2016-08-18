@@ -95,8 +95,6 @@
 
     Ex) emp_ename_nn => "emp 테이블의 ename은 NOT NULL 이다" 라는 뜻으로 제약조건명 작명
 
-
-
 12) 데이터 딕션너리 (Data Dictionary)
     - 오라클 객체들의 정보를 담고 있는 객체
     - 데이터베이스에 있는 모든 스키마 객체들의 정의 내용
@@ -124,3 +122,5 @@
    SELECT column_name, uc.constraint_name, constraint_type, search_condition
    FROM user_constraints uc JOIN user_cons_columns ucc ON uc.table_name=ucc.table_name
    AND uc.constraint_name=ucc.constraint_name WHERE uc.table_name='EMP';
+
+

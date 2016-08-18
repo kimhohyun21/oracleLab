@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f888426f-70b3-49e4-ba8a-7c5252267d38" name="Default" comment="Upload new file Oracle11, 12, 13, 14, 15">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Oracle1.sql" afterPath="$PROJECT_DIR$/Oracle01.sql" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Oracle2.sql" afterPath="$PROJECT_DIR$/Oracle02.sql" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Oracle3.sql" afterPath="$PROJECT_DIR$/Oracle03.sql" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Oracle4.sql" afterPath="$PROJECT_DIR$/Oracle04.sql" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Oracle5.sql" afterPath="$PROJECT_DIR$/Oracle05.sql" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Oracle6.sql" afterPath="$PROJECT_DIR$/Oracle06.sql" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Oracle7.sql" afterPath="$PROJECT_DIR$/Oracle07.sql" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Oracle8.sql" afterPath="$PROJECT_DIR$/Oracle08.sql" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Oracle9.sql" afterPath="$PROJECT_DIR$/Oracle09.sql" />
+    <list default="true" id="f888426f-70b3-49e4-ba8a-7c5252267d38" name="Default" comment="Update file Oracle15 and change file name Oracle01~09">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Oracle16.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Oracle15.sql" afterPath="$PROJECT_DIR$/Oracle15.sql" />
     </list>
@@ -46,101 +39,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Oracle01.sql" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Oracle01.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="42" column="44" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Oracle02.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Oracle02.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Oracle03.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Oracle03.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Oracle04.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Oracle04.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="87" column="88" selection-start-line="87" selection-start-column="88" selection-end-line="87" selection-end-column="88" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Oracle05.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Oracle05.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="121" column="21" selection-start-line="121" selection-start-column="21" selection-end-line="121" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Oracle06.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Oracle06.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="166" column="22" selection-start-line="166" selection-start-column="22" selection-end-line="166" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Oracle07.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Oracle07.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="56" column="56" selection-start-line="56" selection-start-column="56" selection-end-line="56" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Oracle08.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Oracle08.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="88" column="3" selection-start-line="88" selection-start-column="3" selection-end-line="88" selection-end-column="77" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Oracle09.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Oracle09.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Oracle15.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Oracle15.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="122" column="33" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
+            <state relative-caret-position="501">
+              <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Oracle16.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Oracle16.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -166,6 +79,7 @@
         <option value="$PROJECT_DIR$/Oracle13.sql" />
         <option value="$PROJECT_DIR$/Oracle14.sql" />
         <option value="$PROJECT_DIR$/Oracle15.sql" />
+        <option value="$PROJECT_DIR$/Oracle16.sql" />
       </list>
     </option>
   </component>
@@ -271,21 +185,14 @@
     <MESSAGE value="Update file Oracle6 and upload new file Oracle7" />
     <MESSAGE value="Upload new file Oracle8, 9, 10" />
     <MESSAGE value="Upload new file Oracle11, 12, 13, 14, 15" />
-    <option name="LAST_COMMIT_MESSAGE" value="Upload new file Oracle11, 12, 13, 14, 15" />
+    <MESSAGE value="Update file Oracle15 and change file name Oracle01~09" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update file Oracle15 and change file name Oracle01~09" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Oracle01.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="33" column="64" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Oracle02.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="882">
@@ -605,10 +512,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Oracle15.sql">
+    <entry file="file://$PROJECT_DIR$/Oracle01.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="122" column="33" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
+        <state relative-caret-position="567">
+          <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -677,10 +584,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Oracle01.sql">
+    <entry file="file://$PROJECT_DIR$/Oracle15.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="42" column="44" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+        <state relative-caret-position="501">
+          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Oracle16.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
           <folding />
         </state>
       </provider>
