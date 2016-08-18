@@ -43,5 +43,84 @@
      => NULL 값과 중복 값 등이 허용됨
      => 자기 자신의 기본키를 참조하는 외래키도 가능함
 
+   dept                  emp
+   ====                  ===
+   deptno                deptno
+   10                    10
+   20                    20
+   30                    30
+   40                    50(X) ==> 참조하고 있는 키의 값이 아닌 경우 들어 갈 수 없음
+   ======                =====
+   PRIMARY KEY           FOREIGN KEY
+
+6) UNIQUE : 중복이 없는 값(NULL값은 허용)
+   Ex)
+    - 종류 : 전화번호, 이메일 등....
+
+    - 형식 :
+            email VARCHAR2(50) UNIQUE
+
+7) PRIMARY KEY : NOT NULL + UNIQUE
+   Ex)
+    - 종류 : ID(중복 체크)
+
+    - 형식 :
+            id VARCHAR2(10) PRIMARY KEY
+
+8) FOREIGN KEY : 참조키
+   Ex)
+    - 종류 : dept ==> deptno
+
+    - 형식 :
+            bno NUMBER FOREIGN KEY REFERENCE board(no)
+            ==> bno는 board라는 테이블의 no를 참조하는 외래키이다
+
+9) CHECK : 원하는, 지정된 데이터만 출력
+   Ex)
+    - 종류 : 콤보박스, 라디오, 체크 박스
+    - 형식 :
+            gender VARCHAR2(10) CHECK(gender IN('남', '여'))
+
+10) DEFAULT : 미리 지정 => 입력값이 없는 경우 지정된 데이터가 출력 됨
+    Ex)
+     - 형식:
+            regdate DATE DEFAULT SYSDATE
+
+11) 관습적으로 사용하는 제약조건 작명법
+    - UNIQUE => UK
+    - NOT NULL => NN
+    - PRIMARY KEY => PK
+    - FOREIGN KEY => FK
+    - CHECK => CK
+
+    Ex) emp_ename_nn => "emp 테이블의 ename은 NOT NULL 이다" 라는 뜻으로 제약조건명 작명
 
 
+
+12) 데이터 딕션너리 (Data Dictionary)
+    - 오라클 객체들의 정보를 담고 있는 객체
+    - 데이터베이스에 있는 모든 스키마 객체들의 정의 내용
+      (*스키마 : 테이블의 배경 정보, 내포 사항 / 각 컬럼의 제약조건도 스키마의 일부)
+    - 스키마 오브젝트들과 이들의 데이터베이스에서 차지하는 공간 등에 대한 정보
+    - 테이블의 컬럼들에 대한 디폴트값 정보
+    - 제약조건
+    - 모든 오라클 사용자들에 대한 정보
+    - 각 사용자에게 부여된 권한 정보
+    - 기타 일반적인 데이터베이스에 대한 정보
+
+13) 데이터 딕션너리의 종류
+    - 기준 테이블 및 참고 가능한 뷰
+      (*뷰(VIEW) : 하나 이상의 테이블을 합쳐서 만든 가상의 테이블)
+    - 시스템 뷰
+    - ALL 뷰
+    - DBA 뷰
+    - USER 뷰 : 로그인 한 사용자가 소유자가 되는 스키마 정보를 갖고 있는 뷰
+                Ex)
+                  - USER_OBJECTS
+                  - USER_TABLES
+                  - USER_CONTRAINS....
+
+-- 데이터 딕션너리 확인 : EMP 테이블의 제약조건 확인
+   SELECT column_name, uc.constraint_name, constraint_type, search_condition
+   FROM user_constraints uc JOIN user_cons_columns ucc ON uc.table_name=ucc.table_name
+   AND uc.constraint_name=ucc.constraint_name WHERE uc.table_name='EMP';
