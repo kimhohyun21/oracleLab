@@ -17,5 +17,8 @@
     <file url="file://$PROJECT_DIR$/Oracle14.sql" dialect="Oracle" />
     <file url="file://$PROJECT_DIR$/Oracle15.sql" dialect="Oracle" />
     <file url="file://$PROJECT_DIR$/Oracle16.sql" dialect="Oracle" />
+    <file url="file://$PROJECT_DIR$/Oracle17.sql" dialect="Oracle" />
+    <file url="file://$PROJECT_DIR$/Oracle18.sql" dialect="Oracle" />
+    <file url="file://$PROJECT_DIR$/Oracle19.sql" dialect="Oracle" />
   </component>
 </project>
