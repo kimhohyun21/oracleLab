@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
+    <file url="file://$USER_HOME$/Desktop/SQL120514-1.sql" dialect="Oracle" />
     <file url="file://$PROJECT_DIR$/Oracle01.sql" dialect="Sybase" />
     <file url="file://$PROJECT_DIR$/Oracle02.sql" dialect="Oracle" />
     <file url="file://$PROJECT_DIR$/Oracle03.sql" dialect="H2" />
@@ -20,5 +21,8 @@
     <file url="file://$PROJECT_DIR$/Oracle17.sql" dialect="Oracle" />
     <file url="file://$PROJECT_DIR$/Oracle18.sql" dialect="Oracle" />
     <file url="file://$PROJECT_DIR$/Oracle19.sql" dialect="Oracle" />
+    <file url="file://$PROJECT_DIR$/Oracle21.sql" dialect="Oracle" />
+    <file url="file://$PROJECT_DIR$/Oracle22.sql" dialect="Oracle" />
+    <file url="file://$PROJECT_DIR$/Oracle23.sql" dialect="Oracle" />
   </component>
 </project>
