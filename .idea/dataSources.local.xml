@@ -9,8 +9,8 @@
       <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>scott</user-name>
-      <introspection-scope>*:SCOTT,PUBLIC,SYS,SYSTEM</introspection-scope>
-      <resolve-scope>*:SCOTT,PUBLIC</resolve-scope>
+      <introspection-scope>*:PUBLIC,SCOTT,SYS,SYSTEM</introspection-scope>
+      <resolve-scope>*:PUBLIC,SCOTT</resolve-scope>
     </data-source>
   </component>
 </project>

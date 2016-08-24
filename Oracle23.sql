@@ -110,3 +110,51 @@
    COMMIT;
 
    SELECT * FROM orders;
+
+-- book 테이블에서 '축구'라는 문구가 포함된 자료만 보여주는 뷰를 만들어라
+   SELECT * FROM book WHERE bookname LIKE '%축구%';
+   /*
+   CREATE VIEW 뷰이름 [(열이름...)] AS SELECT문
+    */
+   CREATE VIEW vw_book AS SELECT * FROM book WHERE bookname LIKE '%축구%';
+   SELECT * FROM vw_book;
+
+-- 주소에 '대한민국'을 포함하는 고객들로 구성된 뷰를 만들고 조회하시오,
+-- 단, VIEW의 이름을 vw_customer로 한다
+   SELECT * FROM customer WHERE address LIKE '%대한민국%';
+
+   CREATE VIEW vw_customer AS SELECT * FROM customer WHERE address LIKE '%대한민국%';
+   SELECT * FROM vw_customer;
+
+-- VIEW의 수정
+   /*
+   CREATE OR REPLACE VIEW 뷰이름 [(열이름...)] AS SELECT문
+   */
+   CREATE OR REPLACE VIEW vw_customer(custid, name, address)
+   AS SELECT custid, name, address FROM customer WHERE address LIKE '%영국%';
+   SELECT * FROM vw_customer;
+
+-- orders 테이블에 고객이름과 도서이름을 바로 확인할 수 있는 뷰를 생성한 후,
+-- '김연아' 고객이 구입한 도서의 주문번호, 도서이름, 주문액을 보이시오.
+   SELECT orderid 주문번호, od.custid 고객번호, name 고객명,
+          od.bookid 책번호, bookname 도서이름, saleprice 주문액, orderdate 주문일
+   FROM book bk, customer cs, orders od
+   WHERE bk.bookid=od.bookid AND cs.custid=od.custid;
+
+   CREATE VIEW vw_orders
+   AS SELECT orderid 주문번호, od.custid 고객번호, name 고객명,
+          od.bookid 책번호, bookname 도서이름, saleprice 주문액, orderdate 주문일
+   FROM book bk, customer cs, orders od
+   WHERE bk.bookid=od.bookid AND cs.custid=od.custid;
+
+   SELECT * FROM vw_orders;
+   SELECT 주문번호, 고객명, 도서이름, 주문액 FROM vw_orders WHERE 고객명='김연아';
+   /*
+   - VIEW 생성시 컬럼을 지정하게 되면 컬럼에 별칭을 줄수 없음
+     Ex) CREATE VIEW vw_orders (orderid 주문번호, custid, 고객번호.....) ==> 에러 발생
+
+   - VIEW 생성시 컬럼에 별칭을 설정하게 되면 검색 시에도 별칭으로 밖에 검색이 되지 않음
+     Ex) SELECT orderid, name, bookname, saleprice FROM vw_orders WHERE name='김연아'; ==> 에러 발생
+    */
+
+
