@@ -126,6 +126,7 @@ DROP TABLE 판매전표;
 답변개수     depth          NUMBER           DEFAULT
 
  */
+DROP TABLE replyBoard CASCADE CONSTRAINTS;
 
 CREATE TABLE replyBoard(
   no NUMBER CONSTRAINT RB_no_PK PRIMARY KEY,
@@ -138,9 +139,12 @@ CREATE TABLE replyBoard(
   hit NUMBER DEFAULT 0,
   group_id NUMBER DEFAULT 0,
   group_step NUMBER DEFAULT 0,
+  group_tab NUMBER DEFAULT 0,
   root NUMBER DEFAULT 0,
   depth NUMBER DEFAULT 0
 );
+
+ALTER TABLE replyBoard DROP UNIQUE(email);
 
 SELECT * FROM replyBoard;
 
@@ -192,7 +196,8 @@ SELECT * FROM replyBoard;
                          NOCYCLE이 디폴트
 
 -- no의 자동증가 시퀀스 생성
-CREATE SEQUENCE rb_no_sec START WITH 1 INCREMENT BY 1 NOCYCLE NOCACHE;
+DROP SEQUENCE rb_no_sec;
+CREATE SEQUENCE rb_no_sec START WITH 2 INCREMENT BY 1 NOCYCLE NOCACHE;
 
 -- 시퀀스를 활용하여 게시판 테이블에 데이터 입력
 INSERT INTO replyBoard(no,name,email,subject,content,pwd,group_id)
@@ -243,3 +248,5 @@ INSERT INTO replyBoard(no,name,email,subject,content,pwd,group_id)
 COMMIT;
 
 SELECT * FROM replyBoard;
+
+SELECT count(no) FROM (SELECT*FROM replyBoard WHERE no Between 1 AND 26);
