@@ -80,3 +80,31 @@ VALUES (db_no_seq.nextval, '오해영', '파일없음','파일무','1234','',0);
 COMMIT;
 
 SELECT * FROM dataBoard;
+
+DROP TABLE member CASCADE CONSTRAINTS;
+CREATE TABLE member(
+  id VARCHAR2(20) PRIMARY KEY,
+  pwd VARCHAR2(10) NOT NULL,
+  name VARCHAR2(34) NOT NULL,
+  age NUMBER(3),
+  addr VARCHAR2(100),
+  regDate DATE DEFAULT SYSDATE
+);
+
+INSERT INTO member VALUES ('oh','1234','오해영','25','서울','16/08/01');
+COMMIT;
+SELECT * FROM member;
+
+DROP TABLE diary CASCADE CONSTRAINTS;
+CREATE TABLE diary(
+  no NUMBER PRIMARY KEY,
+  id VARCHAR2(20) NOT NULL,
+  subject VARCHAR2(300) NOT NULL,
+  msg CLOB NOT NULL,
+  year NUMBER,
+  month NUMBER,
+  day NUMBER,
+  regDate DATE DEFAULT SYSDATE
+);
+
+SELECT * FROM diary;
