@@ -107,4 +107,7 @@ CREATE TABLE diary(
   regDate DATE DEFAULT SYSDATE
 );
 
+INSERT INTO diary VALUES ('oh','1234','오해영','25','서울','16/08/01');
+COMMIT;
+
 SELECT * FROM diary;
