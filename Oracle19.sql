@@ -250,3 +250,20 @@ COMMIT;
 SELECT * FROM replyBoard;
 
 SELECT count(no) FROM (SELECT*FROM replyBoard WHERE no Between 1 AND 26);
+
+SELECT no, subject, name, regdate, hit, group_tab FROM replyBoard ORDER BY group_id DESC, group_step ASC;
+
+SELECT no, subject, name, regdate, hit, group_tab, rownum as num
+FROM (SELECT no, subject, name, regdate, hit, group_tab
+FROM replyBoard ORDER BY group_id DESC, group_step ASC);
+
+SELECT no, subject, name, regdate, hit, group_tab, TO_CHAR(regdate, 'YYYY-MM-DD'), num
+FROM (SELECT no, subject, name, regdate, hit, group_tab, rownum as num
+FROM (SELECT no, subject, name, regdate, hit, group_tab
+FROM replyBoard ORDER BY group_id DESC, group_step ASC));
+
+SELECT no, subject, name, regdate, hit, group_tab, TO_CHAR(regdate, 'YYYY-MM-DD'), num
+FROM (SELECT no, subject, name, regdate, hit, group_tab, rownum as num
+FROM (SELECT no, subject, name, regdate, hit, group_tab
+FROM replyBoard ORDER BY group_id DESC, group_step ASC))
+WHERE num BETWEEN 11 AND 20;
