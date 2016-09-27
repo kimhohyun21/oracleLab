@@ -111,3 +111,6 @@ INSERT INTO diary VALUES ('oh','1234','오해영','25','서울','16/08/01');
 COMMIT;
 
 SELECT * FROM diary;
+SELECT * FROM emp;
+
+SELECT job, SUM(sal) FROM emp GROUP BY job;
