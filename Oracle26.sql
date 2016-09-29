@@ -1,5 +1,5 @@
 /*
-  #humorboard 답변형 게시판
+  #board 답변형 게시판
 
     1. 설계
       no : 게시물 번호  => NUMBER => Primary Key
