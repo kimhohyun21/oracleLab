@@ -14,6 +14,7 @@
       group_tab
       root
       depth
+      hot
  */
 
 DROP TABLE humorboard;
