@@ -78,11 +78,15 @@ CREATE TABLE characterList (
   cName      VARCHAR2(20)     CONSTRAINT characterList_nn_cName NOT NULL,
   img        VARCHAR2(1000)   CONSTRAINT characterList_nn_img NOT NULL,
   mNo1       NUMBER           NOT NULL,
-  mNo2       NUMBER           NOT NULL,
-  mNo3       NUMBER           NOT NULL,
+  mNo2       NUMBER,
+  mNo3       NUMBER,
+  mNo4       NUMBER,
+  mNo5       NUMBER,
   CONSTRAINT characterList_nn_mNo1 FOREIGN KEY(mNo1) REFERENCES movieList(mNo),
   CONSTRAINT characterList_nn_mNo2 FOREIGN KEY(mNo2) REFERENCES movieList(mNo),
-  CONSTRAINT characterList_nn_mNo3 FOREIGN KEY(mNo3) REFERENCES movieList(mNo)
+  CONSTRAINT characterList_nn_mNo3 FOREIGN KEY(mNo3) REFERENCES movieList(mNo),
+  CONSTRAINT characterList_nn_mNo4 FOREIGN KEY(mNo4) REFERENCES movieList(mNo),
+  CONSTRAINT characterList_nn_mNo5 FOREIGN KEY(mNo5) REFERENCES movieList(mNo)
 );
 
 /*데이터는 엑셀로 입력*/
@@ -174,7 +178,7 @@ SELECT * FROM reserveList;
 DROP TABLE faq CASCADE CONSTRAINTS;
 CREATE TABLE faq (
   fNo            NUMBER          CONSTRAINT faq_pk_fNo PRIMARY KEY,
-  question       VARCHAR2(20)    CONSTRAINT faq_nn_question NOT NULL,
+  question       VARCHAR2(100)    CONSTRAINT faq_nn_question NOT NULL,
   answer         CLOB            CONSTRAINT faq_nn_answer NOT NULL
 );
 
