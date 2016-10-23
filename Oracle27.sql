@@ -1,6 +1,6 @@
 /*CinemaLab DB*/
 /********************멤버 테이블 생성***********************************************************************************/
-DROP TABLE member;
+DROP TABLE member CASCADE CONSTRAINTS;
 CREATE TABLE member (
   no    NUMBER       CONSTRAINT member_pk_no PRIMARY KEY,
   id    VARCHAR2(20) CONSTRAINT member_nn_id NOT NULL,
@@ -28,7 +28,7 @@ COMMIT;
 SELECT * FROM member;
 
 /********************Q&A 테이블 생성************************************************************************************/
-DROP TABLE qna;
+DROP TABLE qna CASCADE CONSTRAINTS;
 CREATE TABLE qna (
   qNo        NUMBER           CONSTRAINT qna_pk_qNo PRIMARY KEY,
   qSubject   VARCHAR2(1000)   CONSTRAINT qna_nn_qSubject NOT NULL,
@@ -52,13 +52,13 @@ COMMIT;
 SELECT * FROM qna;
 
 /********************영화 리스트 테이블 생성****************************************************************************/
-DROP TABLE movieList;
+DROP TABLE movieList CASCADE CONSTRAINTS;
 CREATE TABLE movieList (
   mNo        NUMBER           CONSTRAINT movieList_pk_mNo PRIMARY KEY,
   poster     VARCHAR2(1000)   CONSTRAINT movieList_nn_poster NOT NULL,
   title      VARCHAR2(100)   CONSTRAINT movieList_nn_title NOT NULL,
   opendate   DATE             CONSTRAINT movieList_nn_opendate NOT NULL,
-  grade      VARCHAR2(20)     CONSTRAINT movieList_nn_grade NOT NULL,
+  grade      NUMBER     CONSTRAINT movieList_nn_grade NOT NULL,
   content    CLOB             CONSTRAINT movieList_nn_content NOT NULL,
   trailer    VARCHAR2(1000)   CONSTRAINT movieList_nn_trailer NOT NULL,
   type       NUMBER           CONSTRAINT movieList_nn_type NOT NULL,
@@ -72,7 +72,7 @@ CREATE TABLE movieList (
 SELECT * FROM movieList;
 
 /********************주요 배우 사진 테이블 생성*************************************************************************/
-DROP TABLE characterList;
+DROP TABLE characterList CASCADE CONSTRAINTS;
 CREATE TABLE characterList (
   cNo        NUMBER           CONSTRAINT characterList_pk_cNo PRIMARY KEY,
   cName      VARCHAR2(20)     CONSTRAINT characterList_nn_cName NOT NULL,
@@ -90,7 +90,7 @@ CREATE TABLE characterList (
 SELECT * FROM characterList;
 
 /*******************영화별 댓글 테이블 생성*****************************************************************************/
-DROP TABLE replyList;
+DROP TABLE replyList CASCADE CONSTRAINTS;
 CREATE TABLE replyList (
   reNo          NUMBER           CONSTRAINT replyList_pk_reNo PRIMARY KEY,
   score         NUMBER           CONSTRAINT replyList_nn_score NOT NULL,
@@ -126,7 +126,7 @@ COMMIT;
 SELECT * FROM replyList;
 
 /*******************극장리스트 테이블 생성*****************************************************************************/
-DROP TABLE theaterList;
+DROP TABLE theaterList CASCADE CONSTRAINTS;
 CREATE TABLE theaterList (
   tNo           NUMBER           CONSTRAINT theaterList_pk_tNo PRIMARY KEY,
   local         VARCHAR2(20)     CONSTRAINT theaterList_nn_local NOT NULL,
@@ -142,7 +142,7 @@ CREATE TABLE theaterList (
 SELECT * FROM theaterList;
 
 /*******************예약 테이블 생성************************************************************************************/
-DROP TABLE reserveList;
+DROP TABLE reserveList CASCADE CONSTRAINTS;
 CREATE TABLE reserveList (
   rNo           NUMBER           CONSTRAINT reserveList_pk_rNo PRIMARY KEY,
   rYear         NUMBER           CONSTRAINT reserveList_nn_rYear NOT NULL,
@@ -171,7 +171,7 @@ COMMIT;
 SELECT * FROM reserveList;
 
 /*******************FAQ 테이블 생성*************************************************************************************/
-DROP TABLE faq;
+DROP TABLE faq CASCADE CONSTRAINTS;
 CREATE TABLE faq (
   fNo            NUMBER          CONSTRAINT faq_pk_fNo PRIMARY KEY,
   question       VARCHAR2(20)    CONSTRAINT faq_nn_question NOT NULL,
