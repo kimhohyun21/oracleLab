@@ -164,12 +164,41 @@ CREATE TABLE reserveList (
 
 /*데이터 입력전에 영화 리스트 데이터 입력 필요*/
 INSERT INTO reserveList
-VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), '2016','10','25','A7','1','신용카드','8000','6','1');
+VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), '2016','11','2','H7','1','신용카드','8000','6','5');
 INSERT INTO reserveList
-VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), '2016','10','26','B5,B6','2','신용카드','16000','6','2');
+VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), '2016','11','2','B5,B6','2','신용카드','16000','6','5');
 INSERT INTO reserveList
-VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), '2016','10','26','G1,G2,G3','3','신용카드','24000','6','3');
-
+VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), '2016','11','2','G1,G2,G3','3','신용카드','24000','6','5');
+INSERT INTO reserveList
+VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), '2016','11','2','F7','1','신용카드','8000','6','6');
+INSERT INTO reserveList
+VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), '2016','11','2','B5,B6','2','신용카드','16000','6','6');
+INSERT INTO reserveList
+VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), '2016','11','2','G5,G6,G7','3','신용카드','24000','6','6');
+INSERT INTO reserveList
+VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), '2016','11','2','E7','1','신용카드','8000','6','4');
+INSERT INTO reserveList
+VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), '2016','11','2','B5,B6','2','신용카드','16000','6','4');
+INSERT INTO reserveList
+VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), '2016','11','2','G1,G2,G3','3','신용카드','24000','6','4');
+INSERT INTO reserveList
+VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), '2016','11','3','H7','1','신용카드','8000','6','5');
+INSERT INTO reserveList
+VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), '2016','11','3','B5,B6','2','신용카드','16000','6','5');
+INSERT INTO reserveList
+VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), '2016','11','3','G1,G2,G3','3','신용카드','24000','6','5');
+INSERT INTO reserveList
+VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), '2016','11','3','F7','1','신용카드','8000','6','6');
+INSERT INTO reserveList
+VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), '2016','11','3','B5,B6','2','신용카드','16000','6','6');
+INSERT INTO reserveList
+VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), '2016','11','3','G5,G6,G7','3','신용카드','24000','6','6');
+INSERT INTO reserveList
+VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), '2016','11','3','E7','1','신용카드','8000','6','4');
+INSERT INTO reserveList
+VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), '2016','11','3','B5,B6','2','신용카드','16000','6','4');
+INSERT INTO reserveList
+VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), '2016','11','3','G1,G2,G3','3','신용카드','24000','6','4');
 COMMIT;
 
 SELECT * FROM reserveList;
