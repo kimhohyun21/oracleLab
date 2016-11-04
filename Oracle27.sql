@@ -185,3 +185,5 @@ CREATE TABLE faq (
 /*데이터는 엑셀로 입력*/
 
 SELECT * FROM faq;
+
+SELECT * FROM REPLYBOARD;

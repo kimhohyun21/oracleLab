@@ -399,6 +399,9 @@ VALUES ((SELECT NVL(MAX(no)+1, 1) FROM board), '오해영', '관리자에 의해
 INSERT INTO board(no, name, subject, content, pwd, group_id)
 VALUES ((SELECT NVL(MAX(no)+1, 1) FROM board), '오해영', 'MVC연습...',
         'MVC구조를 익히다', '1234', (SELECT NVL(MAX(group_id)+1, 1) FROM board));
+INSERT INTO board(no, name, subject, content, pwd, group_id, group_step, group_tab, root, depth)
+VALUES ((SELECT NVL(MAX(no)+1, 1) FROM board), '오해영', '[댓글] MVC연습...',
+        'MVC구조를 익히다', '1234', 122, 1, 1, 122, 0);
 COMMIT;
 
 SELECT * FROM board;
