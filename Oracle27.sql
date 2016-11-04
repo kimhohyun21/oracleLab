@@ -202,7 +202,10 @@ VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), '2016','11','3','G1,G2,G3',
 COMMIT;
 
 SELECT * FROM reserveList;
-
+SELECT seat FROM reserveList NATURAL JOIN theaterList NATURAL JOIN movieList
+		WHERE rYear=2016 AND rMonth=11 AND rDay=2
+		AND theater='신도림' AND movietime='14:30'
+		AND title='닥터 스트레인지';
 /*******************FAQ 테이블 생성*************************************************************************************/
 DROP TABLE faq CASCADE CONSTRAINTS;
 CREATE TABLE faq (
