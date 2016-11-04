@@ -249,7 +249,7 @@ COMMIT;
 
 SELECT * FROM replyBoard;
 
-SELECT count(no) FROM (SELECT*FROM replyBoard WHERE no Between 1 AND 26);
+SELECT count(no) FROM (SELECT*FROM replyBoard WHERE no BETWEEN 1 AND 26);
 
 SELECT no, subject, name, regdate, hit, group_tab FROM replyBoard ORDER BY group_id DESC, group_step ASC;
 
