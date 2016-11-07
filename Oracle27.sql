@@ -62,7 +62,7 @@ CREATE TABLE movieList (
   genre      VARCHAR2(100),
   runtime    VARCHAR2(100),
   director   VARCHAR2(100),
-  cast       VARCHAR2(100),
+  cast       VARCHAR2(1000),
   content    CLOB             CONSTRAINT movieList_nn_content NOT NULL,
   trailer    VARCHAR2(1000)   CONSTRAINT movieList_nn_trailer NOT NULL,
   type       NUMBER           CONSTRAINT movieList_nn_type NOT NULL,
