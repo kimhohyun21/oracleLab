@@ -109,6 +109,8 @@ CREATE TABLE replyList (
   CONSTRAINT replyList_member_fk_no FOREIGN KEY  (no) REFERENCES member(no),
   CONSTRAINT replyList_movieList_fk_mNo FOREIGN KEY  (mNo) REFERENCES movieList(mNo)
 );
+ALTER TABLE replyList MODIFY reContent VARCHAR2(4000);
+
 /*입력하기 전에 영화 리스트 데이터 먼저 생성 필요*/
 INSERT INTO replyList
 VALUES ((SELECT NVL(MAX(reNo)+1,1) FROM replyList), '4','너무 재밌어요','2016-10-24','6','1');
