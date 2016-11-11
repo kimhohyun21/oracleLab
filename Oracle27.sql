@@ -147,8 +147,10 @@ CREATE TABLE theaterList (
   CONSTRAINT theaterList_movieList_fk_mNo FOREIGN KEY  (mNo) REFERENCES movieList(mNo)
 );
 
-/*데이터는 엑셀로 입력*/
+ALTER TABLE replyList MODIFY reContent VARCHAR2(4000);
+ALTER TABLE replyList MODIFY (score default 0);
 
+/*데이터는 엑셀로 입력*/
 
 SELECT * FROM theaterList;
 
