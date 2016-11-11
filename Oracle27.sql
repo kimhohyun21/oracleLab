@@ -67,8 +67,8 @@ CREATE TABLE movieList (
   trailer    VARCHAR2(1000)   CONSTRAINT movieList_nn_trailer NOT NULL,
   type       NUMBER           CONSTRAINT movieList_nn_type NOT NULL,
   CONSTRAINT movieList_ck_type CHECK(type IN(0,1,2)),
-  rank       NUMBER DEFAULT 0,
-  movieLike  NUMBER DEFAULT 0
+  rank       NUMBER(5,2) DEFAULT 0,
+  movieLike  NUMBER(5,2) DEFAULT 0
 );
 
 /*데이터 입력은 엑셀로*/
@@ -148,6 +148,7 @@ CREATE TABLE theaterList (
 );
 
 /*데이터는 엑셀로 입력*/
+
 
 SELECT * FROM theaterList;
 
