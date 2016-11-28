@@ -41,7 +41,7 @@ CREATE TABLE qna (
   root       NUMBER DEFAULT 0,
   depth      NUMBER DEFAULT 0,
   no         NUMBER,
-  CONSTRAINT qna_member_fk_no FOREIGN KEY(no) REFERENCES member(no)
+  CONSTRAINT qna_member_fk_no FOREIGN KEY(no) REFERENCES member(no) ON DELETE CASCADE
 );
 
 INSERT INTO qna (qNo, qSubject, qContent, qRegdate, no)
@@ -101,15 +101,17 @@ SELECT * FROM characterList;
 DROP TABLE replyList CASCADE CONSTRAINTS;
 CREATE TABLE replyList (
   reNo          NUMBER           CONSTRAINT replyList_pk_reNo PRIMARY KEY,
-  score         NUMBER           CONSTRAINT replyList_nn_score NOT NULL,
+  score         NUMBER           DEFAULT 0 CONSTRAINT replyList_nn_score NOT NULL,
   reContent     VARCHAR2(20)     CONSTRAINT eplyList_nn_reContent NOT NULL,
   regDATE       DATE             DEFAULT SYSDATE,
   no            NUMBER,
   mNo           NUMBER,
-  CONSTRAINT replyList_member_fk_no FOREIGN KEY  (no) REFERENCES member(no),
+  CONSTRAINT replyList_member_fk_no FOREIGN KEY  (no) REFERENCES member(no) ON DELETE CASCADE,
   CONSTRAINT replyList_movieList_fk_mNo FOREIGN KEY  (mNo) REFERENCES movieList(mNo)
 );
+
 ALTER TABLE replyList MODIFY reContent VARCHAR2(4000);
+ALTER TABLE replyList MODIFY (score default 0);
 
 /*입력하기 전에 영화 리스트 데이터 먼저 생성 필요*/
 INSERT INTO replyList
@@ -147,10 +149,9 @@ CREATE TABLE theaterList (
   CONSTRAINT theaterList_movieList_fk_mNo FOREIGN KEY  (mNo) REFERENCES movieList(mNo)
 );
 
-ALTER TABLE replyList MODIFY reContent VARCHAR2(4000);
-ALTER TABLE replyList MODIFY (score default 0);
-
 /*데이터는 엑셀로 입력*/
+
+SELECT tNo FROM theaterList WHERE theater='신도림' AND theaterNo=1 AND movietime='21:00';
 
 SELECT * FROM theaterList;
 
@@ -165,7 +166,7 @@ CREATE TABLE reserveList (
   ticket        NUMBER           CONSTRAINT reserveList_nn_ticket NOT NULL,
   payType       VARCHAR2(20)     CONSTRAINT reserveList_nn_paytype NOT NULL,
   payment       NUMBER           CONSTRAINT reserveList_nn_payment NOT NULL,
-  paymentId     VARCHAR2(300) CONSTRAINT reserveList_nn_pid NOT NULL,
+  paymentId     VARCHAR2(300) CONSTRAINT reserveList_uq_pid UNIQUE,
   shopId        VARCHAR2(300) CONSTRAINT reserveList_nn_sid NOT NULL,
   serverPay     NUMBER CONSTRAINT reserveList_nn_sp NOT NULL,
   cardOkNum     VARCHAR2(300) CONSTRAINT reserveList_nn_cok NOT NULL,
@@ -173,91 +174,87 @@ CREATE TABLE reserveList (
   refund        VARCHAR2(20),
   no            NUMBER,
   tNo           NUMBER,
-  CONSTRAINT reserveList_member_fk_no FOREIGN KEY  (no) REFERENCES member(no),
+  CONSTRAINT reserveList_member_fk_no FOREIGN KEY  (no) REFERENCES member(no) ON DELETE CASCADE,
   CONSTRAINT reserveList_theaterList_fk_tNo FOREIGN KEY  (tNo) REFERENCES theaterList(tNo)
 );
 
 /*데이터 입력전에 영화 리스트 데이터 입력 필요*/
 INSERT INTO reserveList
 VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), to_date('2016-10-31 18:50', 'YYYY-MM-DD HH24:MI'),
-                                                     'C11,C12,C13','3','신용카드','24000','imp_더미','merchant_더미','24000','더미','','','6','6');
+                                                     'C11,C12,C13','3','신용카드','24000','imp_더미1','merchant_더미','24000','더미','','','6','6');
 INSERT INTO reserveList
 VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), to_date('2016-11-01 18:50', 'YYYY-MM-DD HH24:MI'),
-                                                     'C11,C12,C13','3','신용카드','24000','imp_더미','merchant_더미','24000','더미','','','6','6');
+                                                     'C11,C12,C13','3','신용카드','24000','imp_더미2','merchant_더미','24000','더미','','','6','6');
 INSERT INTO reserveList
 VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), to_date('2016-11-02 18:50', 'YYYY-MM-DD HH24:MI'),
-                                                     'C11,C12,C13','3','신용카드','24000','imp_더미','merchant_더미','24000','더미','','','6','6');
+                                                     'C11,C12,C13','3','신용카드','24000','imp_더미3','merchant_더미','24000','더미','','','6','6');
 INSERT INTO reserveList
 VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), to_date('2016-11-03 18:50', 'YYYY-MM-DD HH24:MI'),
-                                                     'C11,C12,C13','3','신용카드','24000','imp_더미','merchant_더미','24000','더미','','','6','6');
+                                                     'C11,C12,C13','3','신용카드','24000','imp_더미4','merchant_더미','24000','더미','','','6','6');
 INSERT INTO reserveList
 VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), to_date('2016-11-04 16:40', 'YYYY-MM-DD HH24:MI'),
-                                                     'A7','1','신용카드','8000','imp_더미','merchant_더미','8000','더미','','','6','5');
+                                                     'A7','1','신용카드','8000','imp_더미5','merchant_더미','8000','더미','','','6','5');
 INSERT INTO reserveList
 VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), to_date('2016-11-04 16:40', 'YYYY-MM-DD HH24:MI'),
-                                                     'B5,B6','2','신용카드','16000','imp_더미','merchant_더미','16000','더미','','','6','5');
+                                                     'B5,B6','2','신용카드','16000','imp_더미6','merchant_더미','16000','더미','','','6','5');
 INSERT INTO reserveList
 VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), to_date('2016-11-04 16:40', 'YYYY-MM-DD HH24:MI'),
-                                                     'B15,B17,B18','3','신용카드','24000','imp_더미','merchant_더미','24000','더미','','','6','5');
+                                                     'B15,B17,B18','3','신용카드','24000','imp_더미7','merchant_더미','24000','더미','','','6','5');
 INSERT INTO reserveList
 VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), to_date('2016-11-04 16:00', 'YYYY-MM-DD HH24:MI'),
-                                                     'G1,G2,G3','3','신용카드','24000','imp_더미','merchant_더미','24000','더미','','','6','5');
+                                                     'G1,G2,G3','3','신용카드','24000','imp_더미8','merchant_더미','24000','더미','','','6','5');
 INSERT INTO reserveList
 VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), to_date('2016-11-04 16:40', 'YYYY-MM-DD HH24:MI'),
-                                                     'C11,C12,C13','3','신용카드','24000','imp_더미','merchant_더미','24000','더미','','','6','5');
+                                                     'C11,C12,C13','3','신용카드','24000','imp_더미9','merchant_더미','24000','더미','','','6','5');
 INSERT INTO reserveList
 VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), to_date('2016-11-05 14:30', 'YYYY-MM-DD HH24:MI'),
-                                                     'A7','1','신용카드','8000','imp_더미','merchant_더미','8000','더미','','','6','4');
+                                                     'A7','1','신용카드','8000','imp_더미10','merchant_더미','8000','더미','','','6','4');
 INSERT INTO reserveList
 VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), to_date('2016-11-05 14:30', 'YYYY-MM-DD HH24:MI'),
-                                                     'B5,B6','2','신용카드','16000','imp_더미','merchant_더미','16000','더미','','','6','4');
+                                                     'B5,B6','2','신용카드','16000','imp_더미11','merchant_더미','16000','더미','','','6','4');
 INSERT INTO reserveList
 VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), to_date('2016-11-05 14:30', 'YYYY-MM-DD HH24:MI'),
-                                                     'B15,B17,B18','3','신용카드','24000','imp_더미','merchant_더미','24000','더미','','','6','4');
+                                                     'B15,B17,B18','3','신용카드','24000','imp_더미12','merchant_더미','24000','더미','','','6','4');
 INSERT INTO reserveList
 VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), to_date('2016-11-05 14:30', 'YYYY-MM-DD HH24:MI'),
-                                                     'G1,G2,G3','3','신용카드','24000','imp_더미','merchant_더미','24000','더미','','','6','4');
+                                                     'G1,G2,G3','3','신용카드','24000','imp_더미13','merchant_더미','24000','더미','','','6','4');
 INSERT INTO reserveList
 VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), to_date('2016-11-05 14:30', 'YYYY-MM-DD HH24:MI'),
-                                                     'C11,C12,C13','3','신용카드','24000','imp_더미','merchant_더미','24000','더미','','','6','4');
+                                                     'C11,C12,C13','3','신용카드','24000','imp_더미14','merchant_더미','24000','더미','','','6','4');
 INSERT INTO reserveList
 VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), to_date('2016-11-06 16:40', 'YYYY-MM-DD HH24:MI'),
-                                                     'A7','1','신용카드','8000','imp_더미','merchant_더미','8000','더미','','','6','5');
+                                                     'A7','1','신용카드','8000','imp_더미15','merchant_더미','8000','더미','','','6','5');
 INSERT INTO reserveList
 VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), to_date('2016-11-06 16:40', 'YYYY-MM-DD HH24:MI'),
-                                                     'B5,B6','2','신용카드','16000','imp_더미','merchant_더미','16000','더미','','','6','5');
+                                                     'B5,B6','2','신용카드','16000','imp_더미16','merchant_더미','16000','더미','','','6','5');
 INSERT INTO reserveList
 VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), to_date('2016-11-06 16:00', 'YYYY-MM-DD HH24:MI'),
-                                                     'B15,B17,B18','3','신용카드','24000','imp_더미','merchant_더미','24000','더미','','','6','5');
+                                                     'B15,B17,B18','3','신용카드','24000','imp_더미17','merchant_더미','24000','더미','','','6','5');
 INSERT INTO reserveList
 VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), to_date('2016-11-06 16:40', 'YYYY-MM-DD HH24:MI'),
-                                                     'G1,G2,G3','3','신용카드','24000','imp_더미','merchant_더미','24000','더미','','','6','5');
+                                                     'G1,G2,G3','3','신용카드','24000','imp_더미18','merchant_더미','24000','더미','','','6','5');
 INSERT INTO reserveList
 VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), to_date('2016-11-06 16:40', 'YYYY-MM-DD HH24:MI'),
-                                                     'C11,C12,C13','3','신용카드','24000','imp_더미','merchant_더미','24000','더미','','','6','5');
+                                                     'C11,C12,C13','3','신용카드','24000','imp_더미19','merchant_더미','24000','더미','','','6','5');
 INSERT INTO reserveList
 VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), to_date('2016-11-06 18:50', 'YYYY-MM-DD HH24:MI'),
-                                                     'A7','1','신용카드','8000','imp_더미','merchant_더미','8000','더미','','','6','6');
+                                                     'A7','1','신용카드','8000','imp_더미20','merchant_더미','8000','더미','','','6','6');
 INSERT INTO reserveList
 VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), to_date('2016-11-06 18:50', 'YYYY-MM-DD HH24:MI'),
-                                                     'B5,B6','2','신용카드','16000','imp_더미','merchant_더미','16000','더미','','','6','6');
+                                                     'B5,B6','2','신용카드','16000','imp_더미21','merchant_더미','16000','더미','','','6','6');
 INSERT INTO reserveList
 VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), to_date('2016-11-06 18:50', 'YYYY-MM-DD HH24:MI'),
-                                                     'B15,B17,B18','3','신용카드','24000','imp_더미','merchant_더미','24000','더미','','','6','6');
+                                                     'B15,B17,B18','3','신용카드','24000','imp_더미22','merchant_더미','24000','더미','','','6','6');
 INSERT INTO reserveList
 VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), to_date('2016-11-06 18:50', 'YYYY-MM-DD HH24:MI'),
-                                                     'G1,G2,G3','3','신용카드','24000','imp_더미','merchant_더미','24000','더미','','','6','6');
+                                                     'G1,G2,G3','3','신용카드','24000','imp_더미23','merchant_더미','24000','더미','','','6','6');
 INSERT INTO reserveList
 VALUES ((SELECT NVL(MAX(rNo)+1,1) FROM reserveList), to_date('2016-11-06 18:50', 'YYYY-MM-DD HH24:MI'),
-                                                     'C11,C12,C13','3','신용카드','24000','imp_더미','merchant_더미','24000','더미','','','6','6');
+                                                     'C11,C12,C13','3','신용카드','24000','imp_더미24','merchant_더미','24000','더미','','','6','6');
 
 COMMIT;
 
 SELECT * FROM reserveList;
-SELECT seat FROM reserveList NATURAL JOIN theaterList NATURAL JOIN movieList
-		WHERE rDate=to_date('2016-11-06 18:50', 'YYYY-MM-DD HH24:MI')
-		AND theater='신도림' AND movietime='18:50'
-		AND title='어벤져스: 에이지 오브 울트론';
 /*******************FAQ 테이블 생성*************************************************************************************/
 DROP TABLE faq CASCADE CONSTRAINTS;
 CREATE TABLE faq (
@@ -269,5 +266,3 @@ CREATE TABLE faq (
 /*데이터는 엑셀로 입력*/
 
 SELECT * FROM faq;
-
-SELECT * FROM REPLYBOARD;
